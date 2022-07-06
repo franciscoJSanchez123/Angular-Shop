@@ -1,0 +1,49 @@
+<div class="block-main">
+    <div class="block-central">
+        <div class="container">
+            <div class="head"></div>
+            <div class="box-messages">
+
+                <div class="received" *ngFor="let message of messageReceived">
+                    <div class="message-recived">{{message}}</div>
+                </div>
+                <div class="send" *ngFor="let message of messageSend">
+                    <div class="message-send">{{message}}</div>
+                </div>
+                    
+            </div>
+
+
+
+            <div class="box-writing">
+
+                <div class="text">
+                    <input type="text" name="text" placeholder="message" [(ngModel)]="text" >
+                </div>
+
+                <div class="btn-send">
+                    <button (click)="onMessage()">enviar</button>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<input type="text" name="room" placeholder="room" [(ngModel)]="room"> {{room}}>
+<button (click)="onJoin()">join</button><br>
+
+
+<!--<input type="text" name="room" placeholder="room" [(ngModel)]="room"> {{room}}>
+<button (click)="onJoin()">join</button><br>
+
+<input type="text" name="message" placeholder="message" [(ngModel)]="message"> {{message}}>
+<button (click)="onMessage()">message</button><br>-->

@@ -1,0 +1,172 @@
+:host{
+    height: 100%;
+}
+.body-secun {
+    
+    height:100%;
+  }
+  .carrusel{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width:96%;
+  left: 2%;
+  right: 2%;
+  /*top: -25%;
+  bottom: 10%;*/
+  
+  }
+
+  .next-prev{
+    
+    position: relative;
+    top: -50%;
+
+  }
+
+  .prev {
+    height: 50px;
+    width: 50px;
+    border-color: #000000;
+    border-radius:50%;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.2;
+    position: relative;
+    
+
+  }
+
+  .next{
+    height: 50px;
+    width: 50px;
+    border-color: #000000;
+    border-radius:50%;
+    border-style: solid;
+    border-width: 1px;
+    opacity: 0.2;
+    position: relative;
+    right: -92%;
+
+
+
+  }
+
+  .btn {
+    /*background-color: #ffffff;*/
+    position: relative;
+    top: -6%;
+    text-align: center;
+
+  }
+  
+  #btn-btn{
+    position: relative;
+    
+    margin-right: 4px; 
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+
+  }
+  
+  .muestra {
+   
+    height: 100%;  /*esta la tenia en 120%*/
+    width:5222.4px; /*este valor se debe ajustar segun el nro de imagenes y el ancho de carrusel*/
+    
+    
+    position: relative;
+    
+    display: flex;
+    margin: 0;
+  }
+ 
+
+ 
+  .block1{
+    
+    height:100%;
+    width:25%;
+
+    display: flex;
+    
+  }
+
+  .text{
+    width: 50%;
+    height: 100%;
+    color: #ffffff;
+  }
+  .container-text{
+    height: 50%;
+    position: relative;
+    top: 30%;
+    left: 16%;
+  }
+
+  .container-text h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.3em;
+    
+  }
+  .buy{
+    height: 15%;
+    width: 30%;
+  }
+
+  .buy button{
+    height: 100%;
+    width: 100%;
+    /*border-radius:30px;*/
+    border-radius:13px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0px 10px 10px -6px black;
+
+  }
+  .img{
+    width: 50%;
+  }
+
+  .img1{
+    height: 100%;
+    width: 80%;
+
+    position: relative;
+    float: right;
+    right: 20%;
+  }
+
+  .img1 img{
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+
+  .block2{
+    
+    height:100%;
+    width:25%;
+    display: flex;
+  }
+  .block3{
+    
+    height:100%;
+    width:25%;
+    display: flex;
+  }
+  .block4{
+    
+    height:100%;
+    width:25%;
+    display: flex;
+  
+  }

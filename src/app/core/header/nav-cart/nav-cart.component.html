@@ -1,0 +1,44 @@
+<div class="nav-cart">
+    
+    <a href="" routerLink="/cart"><mat-icon>shopping_cart</mat-icon></a>
+
+    <div class="quantity"> {{items.length}}</div>
+
+    <div class="view">
+        <div class="item" *ngFor="let item of items">
+
+            <div class="item-img">
+                <img src="{{item.item.img}}" alt="">
+            </div>
+
+            <div class="item-data">
+                {{item.item.name}} <br>
+                {{item.quantity}}x{{item.item.price}}$
+            </div>
+
+            <div class="item-clear">
+                <a (click)="clearItem(item)">x</a>
+            </div>
+
+        </div>
+
+        <div class="total">
+            TOTAL={{total}}$
+        </div>
+
+        <div class="options">
+
+            <div id="goTo">
+                <button routerLink="/cart">Go to Cart</button>
+                
+            </div>
+
+            <div id="cleart-cart">
+                <button (click)="clearCart()">Clear Cart </button>
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>

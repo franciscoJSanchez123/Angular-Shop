@@ -1,0 +1,140 @@
+<div class="body-secun">
+    <div class="carrusel">
+
+        <div [ngSwitch]= "imgview" class="muestra">
+  
+            <div *ngSwitchCase="1" class="block1" >
+                <div class="text">
+
+                    <div class="container-text">
+                        <h1>
+                            CONTACTOR  USFULL <br>
+                            
+                        </h1>
+                        
+                        <h3>
+                            LC1D  <br>
+                            For making, breaking, frequently starting & controling the AC motor <br>
+                            
+                        </h3>
+                        <h2>
+                            12.00$
+                        </h2>
+                       <div class="buy">
+                            <button>
+                                Comprar
+                            </button>
+                       </div>
+                    </div>
+
+                </div>
+
+                <div class="img">
+                    <div class="img1" >
+                        <img  src="./../../../../../assets/img/contactor-usfull-sin-fondo.png" alt="Ferreservica">
+                    </div>
+                </div>
+
+            </div>
+
+
+  
+            <div *ngSwitchCase="2" class="block2" >
+                
+                <div class="text">
+
+                    <div class="container-text">
+                        <h1>
+                            BREAKER  USFULL <br>
+                            
+                        </h1>
+                        
+                        <h3>
+                            DZ47 MCB  <br>
+                            Circuit breaker covers current range from 2A up to 63A. Curve C, curve B and curve D available <br>
+                            
+                        </h3>
+                        <h2>
+                            5.00$
+                        </h2>
+                       <div class="buy">
+                            <button>
+                                Comprar
+                            </button>
+                       </div>
+                    </div>
+
+                </div>
+
+                <div class="img">
+                    <div class="img1" >
+                        <img  src="./../../../../../assets/img/3breakers-usfull-sinFondo.png" alt="Ferreservica">
+                    </div>
+                </div>
+            </div>
+  
+            <div *ngSwitchCase="3" class="block3" >
+              
+                <div class="text">
+
+                    <div class="container-text">
+                        <h1>
+                            SMART SWITCH  SONOFF <br>
+                            
+                        </h1>
+                        
+                        <h3>
+                            BASICR2  <br>
+                            Compatible with Amazon Alexa, Google Assistant, SmartThings, and Alice. <br>
+                            
+                        </h3>
+                        <h2>
+                            11.00$
+                        </h2>
+                       <div class="buy">
+                            <button>
+                                Comprar
+                            </button>
+                       </div>
+                    </div>
+
+                </div>
+
+                <div class="img">
+                    <div class="img1" >
+                        <img  src="./../../../../../assets/img/smart-switch-Sonoff-sinFondo.png" alt="Ferreservica">
+                    </div>
+                </div>
+
+            </div>
+  
+            <div *ngSwitchCase="4" class="block4">
+              <img  src="./../../../../../assets/img/contactor-sinFondo-conSombra.png" alt="Ferreservica">
+            </div>
+        </div>
+
+        
+
+        <div class="btn">
+            
+                <button id="btn-btn" (click)= "selection(1)" type="button">  </button>
+                <button id="btn-btn" (click)= "selection(2)" type="button">  </button>
+                <button id="btn-btn" (click)= "selection(3)" type="button">  </button>
+                <button id="btn-btn" (click)= "selection(4)"  type="button">  </button>
+            
+
+        </div>
+
+        <div class="next-prev">
+
+            <button class="prev" (click)= "NextPrev(-1)" type="button"> - </button>
+            <button class="next" (click)= "NextPrev(1)" type="button"> + </button>
+
+
+        </div>
+
+  
+      </div>
+
+
+</div>

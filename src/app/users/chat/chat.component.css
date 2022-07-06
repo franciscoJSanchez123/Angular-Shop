@@ -1,0 +1,91 @@
+.block-main{
+    height: 100%;
+    width: 100%;
+    background-color: #469790;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-central{
+    height: 90%;
+    width: 40%;
+    background-color: #9b80c7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container{
+    height: 96.5%;
+    width: 96.5%;
+    background-color: #80a1c7;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.head{
+    height: 12%;
+    background-color: #464b97;
+}
+.box-messages{
+    height: 75%;
+    overflow:auto;
+    background-color: #944697;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.received{
+    background-color: #d8cbd8;
+    width: 100%;
+}
+.send{
+    background-color: #575057;
+    width: 100%;
+}
+.message-recived{
+    float: right;
+}
+.message-send{
+    float: left;
+}
+
+
+
+
+
+
+.box-writing{
+    height: 13%;
+    background-color: #978f46;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text{
+    height: 70%;
+    width: 90%;
+}
+.text input{
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+.btn-send{
+    height: 70%;
+    width: 10%;
+}
+.btn-send button{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    background-color: blue;
+}

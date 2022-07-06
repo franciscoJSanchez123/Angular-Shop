@@ -1,0 +1,29 @@
+:host{
+    width:15%;
+}
+.nav-search{
+    height: 100%;
+    
+}
+.search{
+    display: flex;
+    height: 100%;
+}
+.result{
+    position: relative;
+    z-index: 100;
+    bottom: 0%;
+    background-color: blue;
+    
+}
+
+
+
+mat-icon{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

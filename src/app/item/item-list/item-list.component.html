@@ -1,0 +1,58 @@
+<div id="container">
+    <div class="item-main">
+
+        <div class="item-head">
+    
+            <div class="sortBy">
+    
+                <select name="" id="" #selectSort (change)="selectOrder(selectSort.value)">
+                    <option value="">All</option>
+                    <option value="priceASC" >From lowest to highest price</option>
+                    <option value="priceDESC" >From highest to lowest price</option>
+                    <option value="nameASC">alphabetical order a-z</option>
+                    <option value="nameDESC">alphabetical order z-a</option>
+                </select>
+    
+            </div>
+    
+        </div>
+    
+        <div class="item-body">
+    
+            <div class="item" *ngFor="let item of items  | paginate: { itemsPerPage: 2, currentPage: page } ">
+    
+                <div class="container">
+    
+                    <div class="item-img">
+                     <a routerLink="/itemDetail/{{item._id}}">  <img src="{{item.img}}" alt=""> </a>
+                    </div>
+    
+                    <div class="item-price">
+                        ${{item.price}}
+                    </div>
+    
+                    <div class="item-name">
+                      <a routerLink="/itemDetail/{{item._id}}">  {{item.name}}</a>
+                    </div>
+    
+                    <div class="add">
+                       <button (click)="addItem(item)">Add to cart</button> 
+                    </div>
+                   
+    
+                </div>
+            </div>
+    
+    
+        </div>
+    
+        <div class="item-foot">
+            <pagination-controls
+             (pageChange)="page = $event"
+             previousLabel="previous"
+             nextLabel="next">
+            </pagination-controls>
+        </div>
+    
+    </div>
+</div>

@@ -1,0 +1,116 @@
+.block-base{
+    background-color: #1f62bb;
+    min-height: 80vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-central{
+    background-color: #ffffff;
+    height: 96%;
+    width: 50%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 11px 11px -6px black;
+}
+
+.container{
+    background-color: #ffffff;
+    margin: 5%;
+    height: 95%;
+    width: 100%;
+}
+/*---------------------------------------------------------------------------------------------*/
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.3em;
+}
+/*---------------------------------------------------------------------------------------------*/
+.options{
+    display: flex;
+    height: 30%;
+}
+
+.options div{
+    width: 100%;
+}
+
+.options div button{
+    width: 95%;
+}
+
+.form{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+#img{
+    height: 40%;
+    width: 30%;
+}
+img{
+    max-width: 100%;
+     height: auto;  
+}
+/*--------------------------------------------------------------------------------*/
+.input{
+    height: 14%;
+    width: 80%;
+
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+/*--------------------------------------------------------------------------------*/
+.btn{
+    height: 5vh;
+    width: 100%;
+}
+.btn button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:9px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #0026F9;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}
+/*-------------------------------------------------*/
+.btn-2{
+    height: 5vh;
+    width: 40%;
+}
+.btn-2 button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:9px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #0026F9;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}

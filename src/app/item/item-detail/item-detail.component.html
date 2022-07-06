@@ -1,0 +1,53 @@
+<div id="container">
+    <div class="block">
+        <div class="stripe">
+    
+        </div>
+        <div class="itemDetail-main">
+            <div class="item-gallery">
+                <div class="thumbnails">
+                    <div *ngFor="let img of imgs">
+                        <img src="{{img}}" alt="" (click)="changeImg(img)">
+                    </div>
+                </div>
+        
+                <div class="img">
+                    <img src="{{imgActive}}" alt="">
+                </div>
+        
+            </div>
+        
+        
+        
+        
+            <div class="item-data">
+        
+                <div class="container">
+                    <div class="item-name"><h1>{{item.name}} </h1></div>
+                    <div class="item-price"><h1>${{item.price}}</h1></div>
+            
+            
+                    <div class="item-quantity">
+            
+                        <div class="count">
+                            <div class="less" ><button  (click)="updateQuantity(-1)">-</button></div>
+                            <div class="quantity"><input type="number" [(ngModel)]="Quantity"></div>
+                            <div class="more"><button  (click)="updateQuantity(+1)">+</button></div>
+                        </div>
+            
+                    </div>
+            
+                    <div class="item-add">
+            
+                        <div class="add">
+                            <button (click)="addItem(item)">Add to cart</button>
+                        </div>
+            
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</div>
+

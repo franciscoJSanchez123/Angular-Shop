@@ -1,0 +1,118 @@
+:host{
+    width:10%;
+}
+
+.nav-cart{
+    width: 100%;
+    height: 100%;
+    
+}
+
+.nav-cart:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+mat-icon{
+    font-size: 36px;
+    height: 100%;
+    width: 100%;
+    display: flex; /* de aqui para abajo es para colocar en el medio*/
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+mat-icon:hover{
+    color: #fff;
+}
+
+.quantity{
+    
+    position: relative;
+    top: -92%;
+    text-align: center;
+    
+
+}
+.view{
+    
+    width: 200%;
+    position: relative;
+    right: 100%;
+    bottom: 30%;
+    display: none;
+    background-color: #ffffff;
+    color: #000000;
+    z-index: 100;
+}
+.nav-cart:hover .view{
+    display: block;
+}
+.item{
+    display: flex;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+}
+.item-img{
+    width: 40%;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.item-data{
+    width: 55%;
+  
+
+}
+.item-clear{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0000;
+}
+.options{
+    display: flex;
+}
+.options div{
+    width: 50%;
+}
+.options div button{
+    width: 100%;
+    height: 100%;
+}
+
+
+#goTo,#cleart-cart{
+    height: 5vh;
+    width: 100%;
+}
+#goTo button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:8px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #0026F9;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}
+
+#cleart-cart button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:8px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #000000;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}

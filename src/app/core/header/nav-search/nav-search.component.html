@@ -1,0 +1,14 @@
+<div class="nav-search">
+
+   <div class="search">
+        <input type="text" *ngIf="isActive===true" [(ngModel)]="query">
+        <mat-icon (click)="change()">search</mat-icon>
+   </div>
+
+   <div class="result" *ngIf="query">
+        <div *ngFor="let item of items | itemSearch:query " >
+            <span>{{item.name}}</span>
+        </div>
+   </div>
+    
+</div>

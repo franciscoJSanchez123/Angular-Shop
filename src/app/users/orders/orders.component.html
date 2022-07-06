@@ -1,0 +1,44 @@
+<div class="block-base">
+    <div class="block-central">
+        <div class="block-orders" *ngFor="let order of orders">
+            <div class="container">
+                
+                <div class="order-header">
+                    <div class="order-id">
+                        id:{{order._id}}
+                    </div>
+                    <div class="order-status">
+                        status:{{order.status}}
+                    </div>
+                    <div class="order-total">
+                        Total:{{order.total}}$
+                    </div>
+                </div>
+
+                <div class="order-body" >
+                    <div class="item" *ngFor="let item of order.items">
+                        <div class="item-img">
+                            <div >
+                                <img src="{{item.img}}" alt="">
+                            </div>
+                        </div>
+
+
+                        <div class="item-info">
+                            <div class="item-name">
+                                {{item.name}}
+                            </div>
+                            <div class="item-price">
+                                {{item.price}}$ x {{item.quantity}} unit
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>

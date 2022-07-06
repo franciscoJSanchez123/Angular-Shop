@@ -1,0 +1,180 @@
+.cart-main{
+    min-height: 80vh;
+    width: 86%;
+    position: relative;
+    left: 7%;
+    right: 7%;
+    display: flex;
+    
+    
+}
+
+#container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width:100%;
+    position: relative;
+    
+    display: flex;
+    box-shadow: 0px 11px 11px -6px black;
+}
+/*--------------------------------------------------------------------------------------------------*/
+.total{
+    width: 20%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.btn{
+    height: 8vh;
+    width: 100%;
+    margin: 1%;
+}
+.btn button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:13px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #0026F9;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}
+
+/*--------------------------------------------------------------------------------------------------*/
+.table{
+    width: 80%;
+}
+
+table{  
+    width: 100%;
+    text-align: center;  
+   
+}
+
+
+td{
+    
+    width: 20%;
+    border-bottom: 1px solid #000
+}
+
+/*---------------------------------------------*/
+.clear-cart button{
+    width: 100%;
+    height: 100%;
+    
+    border-radius:13px;
+    /*border-style: solid;*/
+    border-width: 0px;
+    background: #a54141;
+    color: #ffffff;
+    box-shadow: 0px 10px 10px -6px black;
+}
+
+/*---------------------------------------------*/
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.item-img{
+   
+    width: 9vw;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/*---------------------------------------------*/
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
+
+
+.item-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.count{
+    display: flex;
+    height: 40px;
+    width: 50%;
+}
+
+.quantity{
+    width: 100%;
+    height: 100%;
+}
+input{
+    height: 100%;
+    width: 100%;
+    border:0;
+    text-align: center;
+}
+
+
+.less{
+    width:100%;
+    height: 100%;
+}
+.less button{
+    height: 100%;
+    width: 100%;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:  10px;
+    border:0;
+
+    background: #0026F9;
+    color: #ffffff;
+}
+
+
+.more{
+    width:100%;
+    height: 100%;
+}
+.more button{
+    height: 100%;
+    width: 100%;
+
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:  10px;
+    border:0;
+
+    background: #0026F9;
+    color: #ffffff;
+}
+
+.clear-item{
+    height: 10vh;
+}
+
+.clear-item button{
+    height: 100%;
+    width: 20%;
+    color:#ff0202;
+    border: 0;
+    background-color: #ffffff;
+}
+
+
+
+
+
+

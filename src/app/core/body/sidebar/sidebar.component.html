@@ -1,0 +1,58 @@
+<div class="sidebar">
+    <div id="nav-side" >
+        <a  (click)="changesidebar()"><mat-icon >menu</mat-icon></a>
+    </div>
+
+    <br>
+    <br>
+    
+    <div *ngIf="user">
+        <ul >
+            <p>Hola!! {{user.name}}</p>
+            <li>
+                dashboard 
+            </li>
+            <li>
+                Configuración
+            </li>
+
+            <li *ngIf="user.admin">
+                <ul >
+              
+                    <li>
+                        <a routerLink="/addItem"> add item</a> 
+                    </li>
+                   
+                    <li>
+                        <a routerLink="/chat">chat</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            <li>
+                <a routerLink="/orders"> Mis compras</a> 
+            </li>
+            <li>
+                <a routerLink="/chat">chat</a>
+            </li>
+            <li>
+                <a href="" (click)="logout()">cerrar sesión</a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <ul>
+        <p>materiales</p>
+        <li>
+            eléctricos
+        </li>
+        <li>
+            De construcción
+        </li>
+        <li>
+            servicios
+        </li>
+    </ul>
+</div>

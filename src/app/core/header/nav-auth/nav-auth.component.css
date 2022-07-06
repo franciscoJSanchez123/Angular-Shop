@@ -1,0 +1,56 @@
+/*:host{
+    width:20%;
+}
+*/
+.nav-auth{
+    height: 100%;
+}
+ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    
+}
+
+ul li a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}
+
+.access{
+    background-color: #E8E8E8;
+}
+
+
+.acces a{
+    color: #000000;
+}
+
+.access:hover {
+    background-color: #000000;
+}
+
+.access:hover a{
+    color: #fff;
+}
+
+.regis{
+    background-color: #0026F9;
+}
+
+.regis a {
+    color: #fff
+}
+
+.regis:hover {
+    background-color: #000000;
+}
+
+.regis:hover a{
+    color: #fff;
+}

@@ -1,0 +1,99 @@
+<div class="cart-main">
+    <div id="container">
+        <div class="table">
+            <table>
+    
+                <thead>
+                    <tr>
+                        <td><div>Product</div></td>
+                        <td><div>Price</div></td>
+                        <td><div>Quantity</div></td>
+                        <td><div>subtotal</div></td>
+                        <td><div class="clear-cart"><button (click)="clearCart()">Limpiar Carrito</button></div></td>
+        
+                    </tr>
+                </thead>
+        
+                <tbody>
+                    <tr *ngFor='let item of items'>
+        
+                        <td id="col">
+        
+                            <div class="item">
+        
+                                <div class="item-img">
+                                    <img src="{{item.item.img}}" alt="">
+                                </div>
+        
+                                <div class="item-name">
+                                    {{item.item.name}}
+                                </div>
+                                
+                            </div>
+                            
+                        </td>
+        
+                        <td id="col">
+                            <div>
+                                {{item.item.price}}$
+                            </div>
+                            
+                        </td>
+                        
+                        <td id="col">
+                            
+                                <div class="item-quantity">
+        
+                                    <div class="count">
+                                        <div class="less" ><button  (click)="updateQuantity(item,-1)">-</button></div>
+                                        <div class="quantity"><input type="number" [(ngModel)]="item.quantity"></div>
+                                        <div class="more"><button  (click)="updateQuantity(item,+1)">+</button></div>
+                                    </div>
+        
+                                </div>
+                                
+                        </td>
+        
+                        <td id="col">
+                            <div>
+                                {{item.item.price*item.quantity}}$
+                            </div>
+                            
+                        </td>
+        
+                        <td id="col">
+                            <div class="clear-item">
+                                <button (click)="clearItem(item)">X</button>
+                            </div>
+                            
+                        </td>
+                        
+                    </tr>
+                    
+        
+                    <tr >
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td id="total-amount">
+                           Total: {{total}}$
+                        </td>
+                    </tr>
+        
+                </tbody>
+        
+        
+            </table>
+        </div>
+        <div class="total">
+            <h1>Total: {{total}}$</h1>
+            <div class="btn">
+                <button (click)="buy()">Comprar</button>
+            </div>
+            <div class="btn">
+                <a routerLink=""><button (click)="checkout()" >comp </button></a>
+            </div>
+        </div>
+    </div>
+   
+</div>

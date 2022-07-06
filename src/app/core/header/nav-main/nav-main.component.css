@@ -1,0 +1,39 @@
+:host{
+    width: 100%;
+}
+
+.nav-main{
+    height: 100%;
+}
+.main-menu-ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center; /*para alinear los (li) en el centro de la caja (main-menu-ul)*/
+    
+}
+
+.main-menu-ul li{
+     text-align: center;   
+}
+
+.main-menu-ul li:hover {    /*cuando coloque el puntero sobre los li el fondo del li cambia de color*/
+    background-color: #0026F9;
+    
+  
+  }
+
+.main-menu-ul li a{
+    height: 100%;
+    display: flex; /* impontante para que las cajas de las (a) ocupen el 100% del espacio*/
+    align-items: center; /* impontante para que las cajas de las (a) esten justo en el centro*/
+    text-decoration: none; 
+    margin-left: 10px;
+    margin-right: 10px;
+    color:#000000;
+}
+
+.main-menu-ul li:hover a{ /*cuando coloque el puntero sobre los li cambia el color de las letras de a  */
+
+    color: #ffffff;
+}

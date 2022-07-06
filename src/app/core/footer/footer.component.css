@@ -1,0 +1,51 @@
+footer{
+    height: 300px;
+}
+.container{
+    height: 100%;
+}
+.footer-main{
+    height: 80%;
+    display: flex;
+}
+
+
+
+#seccion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width:100%;
+    justify-content: center;
+    
+}
+
+#seccion ul{
+    list-style: none;
+}
+#seccion h3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#seccion ul li a{
+    text-decoration: none;
+    color: #000000;
+}
+
+#seccion:hover{
+    background-color: #E8E8E8;
+}
+
+.footer-secondary{
+    height: 20%;
+}
+
+.Copyright{
+    display: flex;
+    flex-direction: column;
+}
+.Copyright p{
+    text-align: center;
+}
+hr{
+    align-self: center;
+}
