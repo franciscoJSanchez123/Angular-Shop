@@ -40,7 +40,7 @@ ul li a {
 }
 
 .regis{
-    background-color: #0026F9;
+    background-color: #000000;
 }
 
 .regis a {
@@ -48,7 +48,7 @@ ul li a {
 }
 
 .regis:hover {
-    background-color: #000000;
+    background-color: #5f5f5f;
 }
 
 .regis:hover a{

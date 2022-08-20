@@ -23,36 +23,39 @@
                         <a routerLink="/addItem"> add item</a> 
                     </li>
                    
-                    <li>
-                        <a routerLink="/chat">chat</a>
-                    </li>
                     
                 </ul>
             </li>
             
             <li>
-                <a routerLink="/orders"> Mis compras</a> 
+                <a routerLink="/orders"> My orders</a> 
             </li>
+            
             <li>
-                <a routerLink="/chat">chat</a>
-            </li>
-            <li>
-                <a href="" (click)="logout()">cerrar sesión</a>
+                <a href="" (click)="logout()">log out</a>
             </li>
         </ul>
     </div>
     <br>
     <br>
     <ul>
-        <p>materiales</p>
-        <li>
-            eléctricos
+        
+        
+        <li >
+            <a  routerLink="/signin">
+                Sign in
+            </a>
         </li>
-        <li>
-            De construcción
+        <li >
+            <a  routerLink="/signup">
+                Sign up
+            </a>
         </li>
-        <li>
-            servicios
+        <li >
+            <a routerLink="/item-list">
+                Item list
+            </a> 
         </li>
+        
     </ul>
 </div>

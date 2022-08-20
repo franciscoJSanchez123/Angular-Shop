@@ -40,7 +40,7 @@
     border-radius:13px;
     /*border-style: solid;*/
     border-width: 0px;
-    background: #0026F9;
+    background: #000000;
     color: #ffffff;
     box-shadow: 0px 10px 10px -6px black;
 }
@@ -140,7 +140,7 @@ input{
     border-bottom-left-radius:  10px;
     border:0;
 
-    background: #0026F9;
+    background: #000000;
     color: #ffffff;
 }
 
@@ -157,7 +157,7 @@ input{
     border-bottom-right-radius:  10px;
     border:0;
 
-    background: #0026F9;
+    background: #000000;
     color: #ffffff;
 }
 

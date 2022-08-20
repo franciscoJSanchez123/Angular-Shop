@@ -1,7 +1,7 @@
 .sidebar{
     height: 100%;
-    background-color: #ffffff;
-    
+    background-color: #000000;
+    color: #ffffff;
 }
 
 #nav-side{
@@ -18,7 +18,24 @@ mat-icon{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
+ul{
+    list-style: none;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration:none;
+    color: #ffffff;
+}
 
+ul li:hover {
+    color: blue;
+}
+ul li:hover a{
+    color: blue;
+}

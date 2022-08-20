@@ -19,7 +19,7 @@
             <div class="form">
 
                 <div id="input" *ngIf="update || delete" >
-                    <input type="text" name="itemName" placeholder="id del item" [(ngModel)]= "id">
+                    <input type="text" name="itemName" placeholder="item id" [(ngModel)]= "id">
                 </div>
 
                 <div class="btn-2" *ngIf="update || delete">
@@ -31,23 +31,23 @@
                 </div>
 
                 <div class="input">
-                    <input type="text" name="itemName" placeholder="Nombre del item" [(ngModel)]= "item.name">
+                    <input type="text" name="itemName" placeholder="item name" [(ngModel)]= "item.name">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="itemImg" placeholder="url de la Imagen del item" [(ngModel)]= "item.img">
+                    <input type="text" name="itemImg" placeholder="item img url" [(ngModel)]= "item.img">
                 </div>
 
                 <div class="input">
-                    <input type="text" name="itemDescription" placeholder="descripcion del item" [(ngModel)]= "item.description">
+                    <input type="text" name="itemDescription" placeholder="item description" [(ngModel)]= "item.description">
                 </div>
 
                 <div class="input">
-                    <input type="number" name="itemPrice" placeholder="precio del item" [(ngModel)]= "item.price">
+                    <input type="number" name="itemPrice" placeholder="item price" [(ngModel)]= "item.price">
                 </div>
 
                 <div class="btn-2" *ngIf="add" >
-                    <button (click)="addItem()"  [ngStyle]="{'background':'#23ef89'}">añadir Item</button>
+                    <button (click)="addItem()"  [ngStyle]="{'background':'#23ef89'}">add item</button>
                 </div>
 
                 <div class="btn-2" *ngIf="update">

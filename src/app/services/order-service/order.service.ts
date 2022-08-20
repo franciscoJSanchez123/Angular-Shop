@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { CartItem } from 'src/app/models/cart-item';
 import { User } from 'src/app/models/user';
 import { Order2 } from 'src/app/models/order2';
+import { Item2 } from 'src/app/models/item2';
 
 @Injectable({
   providedIn: 'root'
@@ -23,20 +24,59 @@ export class OrderService {
     status:""
   }
 
+  order2:Order2={
+    user:{
+      name:"",
+      password:"",
+      email:"",
+      ordersId:[]
+    },
+    items:[],
+    total:0,
+    status:""
+  }
+
   ordersChange:EventEmitter<any>=new EventEmitter<any>()
   constructor(private http:HttpClient) { }
 
-  createOrder(user:User,items:CartItem[],total:number):Observable<Order>{
+
+
+
+ /**----------------------------------------------------------------------------------------------- */
+  createOrder(user:User,items:CartItem[],total:number):Observable<Order2>{
     console.log(user)
     
-    
+    /*
+    metodo anterior cuando trabajaba con el modelo Order
     this.order.user=user;
     this.order.items=items;
     this.order.total=total
     console.log(this.order)
-    return this.http.post<Order>('http://localhost:3000/orders',this.order)
+    return this.http.post<Order>('http://localhost:3000/orders',this.order)*/
+
+    /**--------------------------------------------------------------- */
+    /*metodo actual trabando con el modelo Order2 */
+    //lo que hacemos es el arreglo items de tipo CartItem
+    //en un arreglo de tipo item2 de esta forma podemos trabajas con
+    //ordenes de tipo Order2
+    
+   let arreglo:any=[]
+   items.map(data=>{
+    
+      let dato:any=data.item;
+      dato.quantity=data.quantity
+      arreglo.push(dato)
+   })
+   this.order2.user=user;
+   this.order2.items=arreglo;
+   this.order2.total=total
+   return this.http.post<Order2>('http://localhost:3000/orders',this.order2)
   }
 
+
+
+
+ /**----------------------------------------------------------------------------------------- */
   findOrderById(id:string): Observable<Order2>{
     return this.http.get<Order2>('http://localhost:3000/orders/'+id)
   }
