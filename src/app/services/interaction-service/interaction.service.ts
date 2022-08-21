@@ -11,12 +11,19 @@ export class InteractionService {
 
   constructor() { }
 
-  change(){
-
-  
-    this.sidebar=!this.sidebar
+  change(option:string){
+    switch(option){
+      case 'open':
+        this.sidebar=true;
+        break;
+      case 'close':
+        this.sidebar=false;
+        break;
+      case 'change':
+        this.sidebar=!this.sidebar
+        break;
+    }
     this.changeSidebar.emit(this.sidebar);
-    console.log(this.sidebar)
   }
 
 

@@ -61,6 +61,8 @@ export class CartComponent implements OnInit {
     
   }
 
+ //--------------------------------------------------------------------------------------------
+
 
   updateQuantity(item:CartItem,quantity:number){
 
@@ -74,14 +76,20 @@ export class CartComponent implements OnInit {
   }
 
 
+ //--------------------------------------------------------------------------------------------
+
   clearItem(item:CartItem){
     this.cartService.removeItem(item);
   }
 
+ //--------------------------------------------------------------------------------------------
 
   clearCart(){
     this.cartService.clearCart();
   }
+
+
+  //--------------------------------------------------------------------------------------------
 
   async buy(){
     console.log("aqui cart buy")
@@ -90,13 +98,21 @@ export class CartComponent implements OnInit {
     console.log(this.user)
     console.log("aqui cart buy")
     if (this.user){
-       this.orderService.createOrder(this.user,this.items,this.total).subscribe();
+       this.orderService.createOrder(this.user,this.items,this.total).subscribe(async(data)=>{
+        
+        const user:any=await this.localStorageService.getUser();
+        this.authService.findUserById(user._id)
+        this.router.navigate(['/success'])
+        
+       });
+       
     }else{
         this.router.navigate(['/signin']);
     }
   }
 
-  //------------------------------------------------------
+  //--------------------------------------------------------------------------------------------
+  
   checkout() {
     // Check the server.js tab to see an example implementation
     this.http.post('http://localhost:3000/payments/create-checkout-session', {})

@@ -88,10 +88,10 @@
         <div class="total">
             <h1>Total: {{total}}$</h1>
             <div class="btn">
-                <button (click)="buy()">create order</button>
+                <button [disabled]="!items" (click)="buy()">create order</button>
             </div>
             <div class="btn">
-                <a routerLink=""><button  >checkout </button></a>
+                <a routerLink=""><button [disabled]="true" (click)="checkout()">checkout </button></a>
             </div>
         </div>
     </div>

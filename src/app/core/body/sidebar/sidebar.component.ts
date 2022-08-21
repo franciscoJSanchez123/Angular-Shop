@@ -38,8 +38,8 @@ export class SidebarComponent implements OnInit {
     this.localStorageService.clearAll()
   }
 
-  changesidebar(){
-    this.interactionService.change()
+  changesidebar(option:string){
+    this.interactionService.change(option)
   }
   
 }

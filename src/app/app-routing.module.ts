@@ -14,7 +14,8 @@ const routes: Routes = [
 {path:'orders', loadChildren: () =>import('./users/orders/orders.module').then(m=>m.OrdersModule)},
 {path:'addItem', loadChildren: () =>import('./admin/add-item/add-item.module').then(m=>m.AddItemModule)},
 {path:'payments', loadChildren: () =>import('./payments/payments.module').then(m=>m.PaymentsModule)},
-{path:'payments2', loadChildren: ()=>import('./payments2/payments2.module').then(m=>m.Payments2Module)}
+{path:'payments2', loadChildren: ()=>import('./payments2/payments2.module').then(m=>m.Payments2Module)},
+{path:'success', loadChildren: ()=>import('./auxView/success/success.module').then(m=>m.SuccessModule)}
 ];
 
 @NgModule({

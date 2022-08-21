@@ -5,6 +5,7 @@ import {OrderService} from './../../services/order-service/order.service';
 import {LocalStorageService} from './../../services/localStorage-service/local-storage.service'
 import { CartItem } from 'src/app/models/cart-item';
 import { Order2 } from 'src/app/models/order2';
+import { AuthService } from 'src/app/services/auth-service/auth.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class OrdersComponent implements OnInit {
  
   constructor(
     private orderService:OrderService,
-    private localStorageService:LocalStorageService
+    private localStorageService:LocalStorageService,
+    private authService:AuthService,
   ) { }
 
   ngOnInit(): void {
@@ -28,10 +30,14 @@ export class OrdersComponent implements OnInit {
     this.localStorageService.userChange.subscribe(()=>{
       this.getUser(); 
     })
+
+    this.authService.userAuth.subscribe(data=>{
+      
+    })
     
 
   }
-
+//--------------------------------------------------------------------------------------------
   async getUser(){
     this.user= await this.localStorageService.getUser()
     this.ordersId=this.user.ordersId
@@ -39,7 +45,6 @@ export class OrdersComponent implements OnInit {
     this.ordersId?.map(orderId=>{
       this.orderService.findOrderById(orderId).subscribe(order=>{
         this.orders.push(order)
-        console.log('aqui orders:',this.orders)
       })  
     })
   }

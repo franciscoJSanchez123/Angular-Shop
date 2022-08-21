@@ -1,0 +1,21 @@
+div{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #11eb2e;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.3em;
+}
+
+div h1 p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SliderjsComponent implements OnInit {
 
   imgview: number=0;
-  imgquant:number=4;
+  imgquant:number=3;
   band:boolean=false;
   band2:boolean=false;
   n:number=0;
@@ -31,13 +31,13 @@ export class SliderjsComponent implements OnInit {
 
       this.band=false;
       this.band2=false;
-      if (this.imgview<1){this.imgview=4}
+      if (this.imgview<1){this.imgview=3}
       if (this.imgview>this.imgquant){this.imgview=1}
 
     }
-/*
+
   this.time =setTimeout( ()=> {this.change()},4000);
-*/
+
   
 }
 

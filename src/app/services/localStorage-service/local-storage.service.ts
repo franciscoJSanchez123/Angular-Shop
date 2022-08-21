@@ -13,24 +13,37 @@ export class LocalStorageService {
   userChange:EventEmitter<void>=new EventEmitter<void>();
 
   constructor() { }
+//--------------------------------------------------------------------------------------------
 
   saveToken(token:string){
       localStorage.setItem('access_token',token);
   }
+  
+//--------------------------------------------------------------------------------------------
+
 
   getToken(){
       const token=localStorage.getItem('access_token');
       return token;
   }
 
+//--------------------------------------------------------------------------------------------
+
+
   clearToken(){
       localStorage.removeItem("access_token");
   }
+
+//--------------------------------------------------------------------------------------------
+
 
   saveUser(user:any){
       localStorage.setItem('user',JSON.stringify(user));
       this.userChange.emit();
   }
+
+//--------------------------------------------------------------------------------------------
+
 
   async getUser(){
       this.usuario= localStorage.getItem('user');
@@ -38,10 +51,17 @@ export class LocalStorageService {
       return this.user;
   }
 
+//--------------------------------------------------------------------------------------------
+
+
   clearUser(){
       localStorage.removeItem("user");
       this.userChange.emit();
   }
+
+
+//--------------------------------------------------------------------------------------------
+
 
   clearAll(){
     localStorage.removeItem("access_token");
@@ -49,13 +69,18 @@ export class LocalStorageService {
     this.userChange.emit();
   }
 
+//--------------------------------------------------------------------------------------------
+
   saveOrders(orders:Order[]){
     localStorage.setItem('orders',JSON.stringify(orders));
   }
+
+//--------------------------------------------------------------------------------------------
 
   async getOrders(){
     this.order=  localStorage.getItem('orders');
     this.orders= await JSON.parse(this.order);
     return this.orders;
   }
+
 }

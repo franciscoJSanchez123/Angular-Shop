@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../models/user';
 import { AuthService } from '../services/auth-service/auth.service';
+import { InteractionService } from '../services/interaction-service/interaction.service';
 
 @Component({
   selector: 'app-signup',
@@ -17,13 +19,17 @@ export class SignupComponent implements OnInit {
     admin:false
   }
   
-  constructor(private authService:AuthService) { }
+  constructor(
+    private authService:AuthService,
+    private router:Router,
+    private interactionService:InteractionService
+    ) { }
 
   ngOnInit(): void {
   }
 
   create(){
     this.authService.create(this.user).subscribe();
-    history.go(-1);
+    this.router.navigate(['/signin'])
   }
 }

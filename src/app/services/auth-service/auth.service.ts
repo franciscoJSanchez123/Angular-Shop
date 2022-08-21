@@ -28,19 +28,42 @@ export class AuthService {
     private localStorageService:LocalStorageService
     ) { }
 
+  //--------------------------------------------------------------------------------------------
+
 
   create(user:User): Observable<User>{
     console.log("aqui auth services")
     return this.http.post<User>('http://localhost:3000/users',user);
   }
 
+
+  //--------------------------------------------------------------------------------------------
+
+
+
   findAll():Observable<User[]>{
     return this.http.get<User[]>("http://localhost:3000/users");
   }
 
+
+  //--------------------------------------------------------------------------------------------
+
+
+  findUserById(id:string){
+    this.setToken();
+    this.http.get<User>("http://localhost:3000/users/"+id,httpOptions).subscribe(data=>{
+      this.localStorageService.saveUser(data);
+    })
+  }
+
+  //--------------------------------------------------------------------------------------------
+
+
   signin(userAuth:UserAuth): Observable<any>{
     return this.http.post("http://localhost:3000/auth/login",userAuth)
   }
+
+  //--------------------------------------------------------------------------------------------
 
   profile() {
     this.setToken();
@@ -53,8 +76,13 @@ export class AuthService {
     
   }
 
+
+  //--------------------------------------------------------------------------------------------
+
   setToken(){
     const token=this.localStorageService.getToken()
     httpOptions.headers=httpOptions.headers.set('Authorization' , 'Bearer '+token)
   }
+
+  //--------------------------------------------------------------------------------------------
 }

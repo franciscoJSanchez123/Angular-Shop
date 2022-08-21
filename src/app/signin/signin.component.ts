@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { InteractionService } from '../services/interaction-service/interaction.service';
 import {UserAuth} from './../models/user-auth';
 import {AuthService} from './../services/auth-service/auth.service';
 import {LocalStorageService} from './../services/localStorage-service/local-storage.service'
@@ -19,7 +21,9 @@ export class SigninComponent implements OnInit {
   
   constructor(
     private authService:AuthService,
-    private localStorageService:LocalStorageService
+    private localStorageService:LocalStorageService,
+    private interactionService:InteractionService,
+    private router:Router,
     ) { }
 
   ngOnInit(): void {
@@ -31,7 +35,8 @@ export class SigninComponent implements OnInit {
       
       this.localStorageService.saveToken(data.access_token);
       this.profile();
-      history.go(-1);
+      this.interactionService.change('open')
+      this.router.navigate(['']);
     })
   }
 

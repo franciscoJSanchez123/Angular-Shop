@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { SliderjsComponent } from './sliderjs/sliderjs.component';
 import { AngularMaterialModule } from './../../../angular-material/angular-material.module'
-
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import { AngularMaterialModule } from './../../../angular-material/angular-mater
     SliderjsComponent
   ],
   imports: [
-    CommonModule, AngularMaterialModule
+    CommonModule, AngularMaterialModule,RouterModule
   ]
 })
 export class HomeModule { }

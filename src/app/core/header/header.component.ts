@@ -14,8 +14,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  changesidebar(){
-    this.interactionService.change()
+  changesidebar(option:string){
+    this.interactionService.change(option)
   }
 
 }
