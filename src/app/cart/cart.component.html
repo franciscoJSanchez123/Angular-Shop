@@ -46,7 +46,7 @@
         
                                     <div class="count">
                                         <div class="less" ><button  (click)="updateQuantity(item,-1)">-</button></div>
-                                        <div class="quantity"><input type="number" [(ngModel)]="item.quantity"></div>
+                                        <div class="quantity">{{item.quantity}}</div>
                                         <div class="more"><button  (click)="updateQuantity(item,+1)">+</button></div>
                                     </div>
         

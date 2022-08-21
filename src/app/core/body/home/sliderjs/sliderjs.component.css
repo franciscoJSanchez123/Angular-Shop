@@ -81,8 +81,8 @@
   .muestra {
    
     height: 100%;  /*esta la tenia en 120%*/
-    width:5222.4px; /*este valor se debe ajustar segun el nro de imagenes y el ancho de carrusel*/
-    
+    /*width:5222.4px; este valor se debe ajustar segun el nro de imagenes y el ancho de carrusel*/
+    width:100%;
     
     position: relative;
     
@@ -95,7 +95,7 @@
   .block1{
     
     height:100%;
-    width:25%;
+    width:100%;
 
     display: flex;
     
@@ -158,19 +158,19 @@
   .block2{
     
     height:100%;
-    width:25%;
+    width:100%;
     display: flex;
   }
   .block3{
     
     height:100%;
-    width:25%;
+    width:100%;
     display: flex;
   }
   .block4{
     
     height:100%;
-    width:25%;
+    width:100%;
     display: flex;
   
   }
