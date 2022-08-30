@@ -11,7 +11,7 @@ import { Item2 } from 'src/app/models/item2';
   providedIn: 'root'
 })
 export class OrderService {
-
+  url:string="https://nest-project.vercel.app/";
   order:Order={
     user:{
       name:"",
@@ -56,8 +56,8 @@ export class OrderService {
 
     /**--------------------------------------------------------------- */
     /*metodo actual trabando con el modelo Order2 */
-    //lo que hacemos es el arreglo items de tipo CartItem
-    //en un arreglo de tipo item2 de esta forma podemos trabajas con
+    //lo que hacemos es convertir el arreglo items de tipo CartItem
+    //en un arreglo de tipo item2 de esta forma podemos trabajar con
     //ordenes de tipo Order2
     
    let arreglo:any=[]
@@ -70,7 +70,9 @@ export class OrderService {
    this.order2.user=user;
    this.order2.items=arreglo;
    this.order2.total=total
-   return this.http.post<Order2>('http://localhost:3000/orders',this.order2)
+   /*return this.http.post<Order2>('http://localhost:3000/orders',this.order2)*/
+   return this.http.post<Order2>(`${this.url}/orders`,this.order2)
+
   }
 
 
@@ -78,6 +80,7 @@ export class OrderService {
 
  /**----------------------------------------------------------------------------------------- */
   findOrderById(id:string): Observable<Order2>{
-    return this.http.get<Order2>('http://localhost:3000/orders/'+id)
+    /*return this.http.get<Order2>('http://localhost:3000/orders/'+id)*/
+    return this.http.get<Order2>(`${this.url}/orders`+id)
   }
 }
