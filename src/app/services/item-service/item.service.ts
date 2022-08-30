@@ -26,7 +26,7 @@ export class ItemService {
     console.log("aqui servicio item")
     console.log(selection)
     /*return this.http.get<Item[]>('http://localhost:3000/items/list/'+ selection)*/
-    return this.http.get<Item[]>(`${this.url}items/list/`+ selection)
+    return this.http.get<Item[]>(`${this.url}items/list/${selection}`)
 
   }
 
@@ -34,19 +34,23 @@ export class ItemService {
   findId(id:string): Observable<Item>{
     console.log('aqui probando')
     console.log(id)
-    return this.http.get<Item>('http://localhost:3000/items/'+id)
+    /*return this.http.get<Item>('http://localhost:3000/items/'+id)*/
+    return this.http.get<Item>(`${this.url}/items/`+id)
   }
 
 
   add(item:Item){
     this.setToken();
-    return this.http.post('http://localhost:3000/items',item, httpOptions)
+    /*return this.http.post('http://localhost:3000/items',item, httpOptions)*/
+    return this.http.post(`${this.url}/items`,item, httpOptions)
   }
 
 
   delete(id:string){
     this.setToken();
-    return this.http.delete('http://localhost:3000/items/'+id, httpOptions)
+    /*return this.http.delete('http://localhost:3000/items/'+id, httpOptions)*/
+    return this.http.delete(`${this.url}/items/`+id, httpOptions)
+
   }
 
 
@@ -57,7 +61,9 @@ export class ItemService {
     console.log(result)
     console.log("aqui item service")
     this.setToken();
-    return this.http.put('http://localhost:3000/items/'+id, result, httpOptions)
+    /*return this.http.put('http://localhost:3000/items/'+id, result, httpOptions)*/
+    return this.http.put(`${this.url}/items/`+id, result, httpOptions)
+
   }
 
   setToken(){
