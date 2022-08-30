@@ -71,7 +71,7 @@ export class OrderService {
    this.order2.items=arreglo;
    this.order2.total=total
    /*return this.http.post<Order2>('http://localhost:3000/orders',this.order2)*/
-   return this.http.post<Order2>(`${this.url}/orders`,this.order2)
+   return this.http.post<Order2>(`${this.url}orders`,this.order2)
 
   }
 
@@ -81,6 +81,6 @@ export class OrderService {
  /**----------------------------------------------------------------------------------------- */
   findOrderById(id:string): Observable<Order2>{
     /*return this.http.get<Order2>('http://localhost:3000/orders/'+id)*/
-    return this.http.get<Order2>(`${this.url}/orders`+id)
+    return this.http.get<Order2>(`${this.url}orders`+id)
   }
 }
