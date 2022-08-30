@@ -14,7 +14,7 @@ const httpOptions = {
 
 @Injectable()
 export class ItemService {
-
+  url:string="https://nest-project.vercel.app/"
   constructor(
     private http:HttpClient,
     private localStorageService:LocalStorageService
@@ -25,7 +25,9 @@ export class ItemService {
   findAll(selection:string): Observable<Item[]>{
     console.log("aqui servicio item")
     console.log(selection)
-    return this.http.get<Item[]>('http://localhost:3000/items/list/'+ selection)
+    /*return this.http.get<Item[]>('http://localhost:3000/items/list/'+ selection)*/
+    return this.http.get<Item[]>(`${this.url}`+ selection)
+
   }
 
 
