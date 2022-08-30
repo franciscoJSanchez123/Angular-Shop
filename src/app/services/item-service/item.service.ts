@@ -35,7 +35,7 @@ export class ItemService {
     console.log('aqui probando')
     console.log(id)
     /*return this.http.get<Item>('http://localhost:3000/items/'+id)*/
-    return this.http.get<Item>(`${this.url}/items/`+id)
+    return this.http.get<Item>(`${this.url}/items/${id}`)
   }
 
 
@@ -49,7 +49,7 @@ export class ItemService {
   delete(id:string){
     this.setToken();
     /*return this.http.delete('http://localhost:3000/items/'+id, httpOptions)*/
-    return this.http.delete(`${this.url}/items/`+id, httpOptions)
+    return this.http.delete(`${this.url}/items/${id}`, httpOptions)
 
   }
 
@@ -62,7 +62,7 @@ export class ItemService {
     console.log("aqui item service")
     this.setToken();
     /*return this.http.put('http://localhost:3000/items/'+id, result, httpOptions)*/
-    return this.http.put(`${this.url}/items/`+id, result, httpOptions)
+    return this.http.put(`${this.url}/items/${id}`, result, httpOptions)
 
   }
 
