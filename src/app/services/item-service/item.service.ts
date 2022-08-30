@@ -26,7 +26,7 @@ export class ItemService {
     console.log("aqui servicio item")
     console.log(selection)
     /*return this.http.get<Item[]>('http://localhost:3000/items/list/'+ selection)*/
-    return this.http.get<Item[]>(`${this.url}`+ selection)
+    return this.http.get<Item[]>(`${this.url}items/list/`+ selection)
 
   }
 
