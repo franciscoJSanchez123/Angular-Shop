@@ -77,7 +77,7 @@ export class Payments2Component implements OnInit {
 
   private createPaymentIntent(amount: number): Observable<PaymentIntent> {
     return this.http.post<PaymentIntent>(
-      `http://localhost:3000/payments/create-payment-intent`,
+      `https://nest-project.vercel.app/payments/create-payment-intent`,
       { amount }
     );
   }
